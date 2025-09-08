@@ -1,12 +1,13 @@
 import { useEffect, useState, type ReactElement } from "react";
 import "./App.css";
 import "react";
+import "./index.css";
 
 interface Forecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
+  date?: string | undefined;
+  temperatureC?: number | undefined;
+  temperatureF?: number | undefined;
+  summary?: string | undefined;
 }
 
 const App = (props: Forecast): ReactElement => {
@@ -52,12 +53,19 @@ const App = (props: Forecast): ReactElement => {
 
   return (
     <div>
-      <h1 id="tableLabel">Weather forecast</h1>
+      <h1 className="text-2xl font-bold text-blue-600" id="tableLabel">
+        Weather forecast
+      </h1>
       <p>
-        This component demonstratfdsafsdes fetching data from the server nice{" "}
+        This component demonstrates fetching data from the server nice{" "}
         {props.date}
       </p>
       {contents}
+
+      <div className="p-10">
+        <h1 className="text-2xl font-bold mb-4">DaisyUI Test</h1>
+        <button className="btn btn-soft btn-primary">Click Me</button>
+      </div>
     </div>
   );
 
