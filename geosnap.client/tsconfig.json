@@ -3,5 +3,10 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "jsx": "react-jsx",            // React 17+ JSX transform
+    "lib": ["dom", "esnext"],      // DOM + modern JS features
+    "types": ["react", "react-dom"]
+  }
 }
