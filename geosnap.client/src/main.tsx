@@ -1,12 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
+import { Provider } from "@/Components/ui/provider";
 import App from "./App.tsx";
+import "./index.css";
 
 createRoot(document.getElementById("root")!).render(
-  <StrictMode>
-    <div data-theme="winter">
-      <App />
-    </div>
-  </StrictMode>
+    <StrictMode>
+        <Provider>
+            <App />
+        </Provider>
+    </StrictMode>
 );
